@@ -154,7 +154,7 @@ if(empty($nameErr) && empty($emailErr) && empty($stateErr) && empty($contactErr)
                     $param_b_group = $b_group; 
                     $param_hiv = $hiv; 
                     $param_condition = $condition1;
-                    $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+                    $param_password = $password; // Creates a password hash
             
             // Attempt to execute the prepared statement
                     if(mysqli_stmt_execute($stmt)){

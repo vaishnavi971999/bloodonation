@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     // if(isset($_POST["username"] && isset($_POST["password"]))){
-    $sql = "SELECT id from donor where name='$name' and email='$email'";
+    $sql = "SELECT id from donor where name='$name' and email='$email' and password='$password'";
     $result = mysqli_query($link,$sql);
 
     if(mysqli_num_rows($result)>0){

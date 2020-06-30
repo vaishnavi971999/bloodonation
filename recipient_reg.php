@@ -171,7 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $param_party = $party;
           $param_s_name = $s_name;
           $param_s_email = $s_email;
-          $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+          $param_password = $password; // Creates a password hash
   
   // Attempt to execute the prepared statement
           if(mysqli_stmt_execute($stmt)){
